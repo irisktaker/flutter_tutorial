@@ -37,6 +37,9 @@ import 'section2_flutter_basics/34_drawer/drawer.dart';
 import 'section2_flutter_basics/35_tab_bar/tab_bar.dart';
 import 'section2_flutter_basics/36_bottom_navigation_bar/bottom_navigation_bar.dart';
 import 'section2_flutter_basics/37_more_about_push_replacement_named/more_about_push_replacement_named.dart';
+import 'section2_flutter_basics/39_slider/slider.dart';
+import 'section2_flutter_basics/40_transform/transform.dart';
+import 'section2_flutter_basics/41_transform2/transform2.dart';
 
 class CourseLessons extends StatelessWidget {
   const CourseLessons({Key? key}) : super(key: key);
@@ -403,7 +406,7 @@ class CourseLessons extends StatelessWidget {
                           context,
                           MaterialPageRoute(
                               builder: (BuildContext context) =>
-                                  const ESplittingApp()));
+                                  const ESlider()));
                     }),
                 buildBtnWidget(
                     text: "Transform",
@@ -412,7 +415,7 @@ class CourseLessons extends StatelessWidget {
                           context,
                           MaterialPageRoute(
                               builder: (BuildContext context) =>
-                                  const ESplittingApp()));
+                                  const ETransform()));
                     }),
                 buildBtnWidget(
                     text: "Transform2",
@@ -421,7 +424,7 @@ class CourseLessons extends StatelessWidget {
                           context,
                           MaterialPageRoute(
                               builder: (BuildContext context) =>
-                                  const ESplittingApp()));
+                                  const Transform2()));
                     }),
               ],
             ),
