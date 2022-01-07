@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'quiz_app.dart';
+
 class Questions extends StatelessWidget {
   final String questionText;
   Questions(this.questionText);
@@ -11,7 +13,7 @@ class Questions extends StatelessWidget {
       width: double.infinity,
       child: Text(
         questionText,
-        style: const TextStyle(fontSize: 30),
+        style: TextStyle(fontSize: 30, color: b),
         textAlign: TextAlign.center,
       ),
     );

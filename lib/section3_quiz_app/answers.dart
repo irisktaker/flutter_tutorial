@@ -12,11 +12,16 @@ class Answers extends StatelessWidget {
       width: double.infinity,
       margin: const EdgeInsets.all(10),
       child: ElevatedButton(
+        style: ButtonStyle(
+          padding: MaterialStateProperty.all(
+            const EdgeInsets.symmetric(vertical: 16),
+          ),
+        ),
         onPressed: function,
         child: Text(
           answerText,
           style: const TextStyle(
-            fontSize: 20,
+            fontSize: 24,
           ),
         ),
       ),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'course_lessons.dart';
+import 'section2_flutter_basics/course_lessons.dart';
 import 'section2_flutter_basics/33_passing_data_between_screens/routes/screen1.dart';
 import 'section2_flutter_basics/33_passing_data_between_screens/routes/screen2.dart';
 import 'section3_quiz_app/quiz_app.dart';
@@ -60,57 +60,57 @@ class MyApp extends StatelessWidget {
         /// OutlinedButton
         outlinedButtonTheme: const OutlinedButtonThemeData(
           style: ButtonStyle(
-            // textStyle: MaterialStateProperty.all(),
-            // backgroundColor: MaterialStateProperty.all(),
-            // foregroundColor: MaterialStateProperty.all(),
-            // overlayColor: MaterialStateProperty.all(),
-            // shadowColor: MaterialStateProperty.all(),
-            // elevation: MaterialStateProperty.all(),
-            // padding: MaterialStateProperty.all(),
-            // minimumSize: MaterialStateProperty.all(),
-            // fixedSize: MaterialStateProperty.all(),
-            // maximumSize: MaterialStateProperty.all(),
-            // side: MaterialStateProperty.all(),
-            // shape: MaterialStateProperty.all(),
-            // mouseCursor: MaterialStateProperty.all(),
-            // visualDensity: MaterialStateProperty.all(),
-            // tapTargetSize: MaterialStateProperty.all(),
-            // animationDuration: MaterialStateProperty.all(),
-            // enableFeedback: MaterialStateProperty.all(),
-            // alignment: MaterialStateProperty.all(),
-            // splashFactory: MaterialStateProperty.all(),
-          ),
+              // textStyle: MaterialStateProperty.all(),
+              // backgroundColor: MaterialStateProperty.all(),
+              // foregroundColor: MaterialStateProperty.all(),
+              // overlayColor: MaterialStateProperty.all(),
+              // shadowColor: MaterialStateProperty.all(),
+              // elevation: MaterialStateProperty.all(),
+              // padding: MaterialStateProperty.all(),
+              // minimumSize: MaterialStateProperty.all(),
+              // fixedSize: MaterialStateProperty.all(),
+              // maximumSize: MaterialStateProperty.all(),
+              // side: MaterialStateProperty.all(),
+              // shape: MaterialStateProperty.all(),
+              // mouseCursor: MaterialStateProperty.all(),
+              // visualDensity: MaterialStateProperty.all(),
+              // tapTargetSize: MaterialStateProperty.all(),
+              // animationDuration: MaterialStateProperty.all(),
+              // enableFeedback: MaterialStateProperty.all(),
+              // alignment: MaterialStateProperty.all(),
+              // splashFactory: MaterialStateProperty.all(),
+              ),
         ),
 
         ///
         /// ElevatedButton
         elevatedButtonTheme: const ElevatedButtonThemeData(
           style: ButtonStyle(
-            // textStyle: MaterialStateProperty.all(),
-            // backgroundColor: MaterialStateProperty.all(),
-            // foregroundColor: MaterialStateProperty.all(),
-            // overlayColor: MaterialStateProperty.all(),
-            // shadowColor: MaterialStateProperty.all(),
-            // elevation: MaterialStateProperty.all(),
-            // padding: MaterialStateProperty.all(),
-            // minimumSize: MaterialStateProperty.all(),
-            // fixedSize: MaterialStateProperty.all(),
-            // maximumSize: MaterialStateProperty.all(),
-            // side: MaterialStateProperty.all(),
-            // shape: MaterialStateProperty.all(),
-            // mouseCursor: MaterialStateProperty.all(),
-            // visualDensity: MaterialStateProperty.all(),
-            // tapTargetSize: MaterialStateProperty.all(),
-            // animationDuration: MaterialStateProperty.all(),
-            // enableFeedback: MaterialStateProperty.all(),
-            // alignment: MaterialStateProperty.all(),
-            // splashFactory: MaterialStateProperty.all(),
-          ),
+              // textStyle: MaterialStateProperty.all(),
+              // backgroundColor: MaterialStateProperty.all(),
+              // foregroundColor: MaterialStateProperty.all(),
+              // overlayColor: MaterialStateProperty.all(),
+              // shadowColor: MaterialStateProperty.all(),
+              // elevation: MaterialStateProperty.all(),
+              // padding: MaterialStateProperty.all(),
+              // minimumSize: MaterialStateProperty.all(),
+              // fixedSize: MaterialStateProperty.all(),
+              // maximumSize: MaterialStateProperty.all(),
+              // side: MaterialStateProperty.all(),
+              // shape: MaterialStateProperty.all(),
+              // mouseCursor: MaterialStateProperty.all(),
+              // visualDensity: MaterialStateProperty.all(),
+              // tapTargetSize: MaterialStateProperty.all(),
+              // animationDuration: MaterialStateProperty.all(),
+              // enableFeedback: MaterialStateProperty.all(),
+              // alignment: MaterialStateProperty.all(),
+              // splashFactory: MaterialStateProperty.all(),
+              ),
         ),
       ),
 
       ///
-      /// home is a defualt routes == '/' : (context) => const HomePage(),
+      /// home is a default routes == '/' : (context) => const HomePage(),
       // home: const HomePage(),
       // returns to the routes with key '/' and it's by default too
       // and we can change it
@@ -142,43 +142,33 @@ class HomePage extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                ElevatedButton(
-                  style: ButtonStyle(
-                    padding:
-                    MaterialStateProperty.all(const EdgeInsets.all(18)),
-                  ),
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const CourseLessons(),
-                      ),
-                    );
-                  },
-                  child: const Text("Course Lessons",
-                      style: TextStyle(fontSize: 22)),
-                ),
+                buildBtn(context, "Course Lessons", const CourseLessons()),
                 const SizedBox(height: 16),
-                ElevatedButton(
-                  style: ButtonStyle(
-                    padding:
-                    MaterialStateProperty.all(const EdgeInsets.all(18)),
-                  ),
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const QuizApp(),
-                      ),
-                    );
-                  },
-                  child: const Text("Quiz App", style: TextStyle(fontSize: 22)),
-                ),
+                buildBtn(context, "Quiz App", const QuizApp()),
+                const SizedBox(height: 16),
+                // buildBtn(context, 'Async Programming', widget)
               ],
             ),
           ),
         ),
       ),
+    );
+  }
+
+  ElevatedButton buildBtn(BuildContext context, String title, Widget widget) {
+    return ElevatedButton(
+      style: ButtonStyle(
+        padding: MaterialStateProperty.all(const EdgeInsets.all(18)),
+      ),
+      onPressed: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => widget,
+          ),
+        );
+      },
+      child: Text(title, style: const TextStyle(fontSize: 22)),
     );
   }
 }
