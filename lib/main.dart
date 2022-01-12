@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'section0_how_to/how_to.dart';
 import 'section2_flutter_basics/course_lessons.dart';
 import 'section2_flutter_basics/33_passing_data_between_screens/routes/screen1.dart';
 import 'section2_flutter_basics/33_passing_data_between_screens/routes/screen2.dart';
@@ -147,6 +148,7 @@ class HomePage extends StatelessWidget {
                 buildBtn(context, "Quiz App", const QuizApp()),
                 const SizedBox(height: 16),
                 // buildBtn(context, 'Async Programming', widget)
+                buildBtn(context, "How To?", const HowToSection()),
               ],
             ),
           ),
