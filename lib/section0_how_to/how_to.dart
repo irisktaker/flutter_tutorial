@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 import '02_use_validate/use_validate_on_text_field.dart';
 import '02_use_validate/use_validate_on_text_form_field.dart';
+import '03stream_controller_and_stream_subscription/stream_controller_and_stream_subscription.dart';
 import 'back_button.dart';
 
 class HowToSection extends StatelessWidget {
@@ -53,6 +54,8 @@ class HowToSection extends StatelessWidget {
                 buildBtnWidget(
                     text: 'Use Validate On TextFormField',
                     widget: const UseValidateOnTextFormFieldPart2()),
+                buildBtnWidget(
+                    text: 'Stream Example', widget: const StreamExample())
               ],
             ),
           ),

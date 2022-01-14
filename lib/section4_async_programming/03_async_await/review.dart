@@ -2,11 +2,15 @@
 
 void main() async {
   // future deals with one value
-  Future.delayed(const Duration(milliseconds: 1000), () => 2)
+  // now this line will await then run
+  // then the second line and so...
+  // not like the example in async_await.dart
+  await Future.delayed(const Duration(milliseconds: 1000), () => 2)
       .then((value) => print('value = $value'))
       .catchError((onError) => print('error :: $onError'));
 
   // this line will run first then the future will run at it's specific time
+  // this line will not run first now
   print('value = Future and Stream example');
 
   // stream deals with multi values
@@ -20,6 +24,7 @@ void main() async {
   // for async programming
   // async and await
 
+  // example on the Future using the await
   try {
     final int value =
         await Future.delayed(const Duration(seconds: 1), () => 20);
