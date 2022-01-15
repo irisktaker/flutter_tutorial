@@ -1,10 +1,12 @@
 import 'package:complete_dev_guide/section0_how_to/01_show_hide_password/show_hide_password.dart';
 import 'package:complete_dev_guide/section0_how_to/02_use_validate/use_validate_on_text_form_field_2.dart';
+import 'package:complete_dev_guide/section0_how_to/04_LinearGradient/linear_gradient.dart';
+import 'package:complete_dev_guide/section0_how_to/05_bottom_navigation_bar/bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
 
 import '02_use_validate/use_validate_on_text_field.dart';
 import '02_use_validate/use_validate_on_text_form_field.dart';
-import '03stream_controller_and_stream_subscription/stream_controller_and_stream_subscription.dart';
+import '03_stream_controller_and_stream_subscription/stream_controller_and_stream_subscription.dart';
 import 'back_button.dart';
 
 class HowToSection extends StatelessWidget {
@@ -55,7 +57,13 @@ class HowToSection extends StatelessWidget {
                     text: 'Use Validate On TextFormField',
                     widget: const UseValidateOnTextFormFieldPart2()),
                 buildBtnWidget(
-                    text: 'Stream Example', widget: const StreamExample())
+                    text: 'Stream Example', widget: const StreamExample()),
+                buildBtnWidget(
+                    text: 'Linear Gradient',
+                    widget: const ExampleLinearGradient()),
+                buildBtnWidget(
+                    text: 'Bottom Navigation Bar',
+                    widget: const ExampleOnBottomNavBar())
               ],
             ),
           ),

@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 import 'section0_how_to/how_to.dart';
 import 'section2_flutter_basics/course_lessons.dart';
@@ -23,6 +25,7 @@ class MyApp extends StatelessWidget {
         ///
         /// this works for all
         primarySwatch: Colors.teal,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
 
         /// these themes are working with the old buttons style
         accentColor: Colors.limeAccent, //accents colors

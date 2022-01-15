@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'package:complete_dev_guide/section3_quiz_app/quiz.dart';
 import 'package:complete_dev_guide/section3_quiz_app/results.dart';
 import 'package:flutter/material.dart';

@@ -10,6 +10,9 @@ class UseValidateOnTextField extends StatefulWidget {
 }
 
 class _UseValidateOnTextFieldState extends State<UseValidateOnTextField> {
+  
+  /// ---------
+  /// 
   final TextEditingController? _validateController = TextEditingController();
   bool _validate = false;
   bool? checkValidate() {

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-AppBar backButton(BuildContext context) {
+AppBar backButton(BuildContext context, {String text = 'How To Section? '}) {
   return AppBar(
     backgroundColor: Colors.transparent,
     elevation: 0,
@@ -11,6 +11,6 @@ AppBar backButton(BuildContext context) {
         Navigator.pop(context);
       },
     ),
-    title: const Text('How To Section? '),
+    title: Text(text),
   );
 }
