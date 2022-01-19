@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import '02_use_validate/use_validate_on_text_field.dart';
 import '02_use_validate/use_validate_on_text_form_field.dart';
 import '03_stream_controller_and_stream_subscription/stream_controller_and_stream_subscription.dart';
+import '06_sliver_list/sliver_list.dart';
 import 'back_button.dart';
 
 class HowToSection extends StatelessWidget {
@@ -63,7 +64,9 @@ class HowToSection extends StatelessWidget {
                     widget: const ExampleLinearGradient()),
                 buildBtnWidget(
                     text: 'Bottom Navigation Bar',
-                    widget: const ExampleOnBottomNavBar())
+                    widget: const ExampleOnBottomNavBar()),
+                buildBtnWidget(
+                    text: 'Sliver List', widget: const ExampleSliverList()),
               ],
             ),
           ),
