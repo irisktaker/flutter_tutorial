@@ -1,12 +1,14 @@
 // ignore_for_file: deprecated_member_use
 
 import 'package:complete_dev_guide/section4_async_programming/section_4.dart';
+import 'package:complete_dev_guide/section5_bmi_app/result_screen.dart';
 import 'package:flutter/material.dart';
 import 'section0_how_to/how_to.dart';
 import 'section2_flutter_basics/course_lessons.dart';
 import 'section2_flutter_basics/33_passing_data_between_screens/routes/screen1.dart';
 import 'section2_flutter_basics/33_passing_data_between_screens/routes/screen2.dart';
 import 'section3_quiz_app/quiz_app.dart';
+import 'section5_bmi_app/bmi_app.dart';
 
 void main() {
   runApp(const MyApp());
@@ -27,6 +29,14 @@ class MyApp extends StatelessWidget {
         /// this works for all
         primarySwatch: Colors.teal,
         visualDensity: VisualDensity.adaptivePlatformDensity,
+
+        /// bmi app
+        canvasColor: Colors.black,
+        // textTheme: TextTheme(
+        //   headline3: TextStyle(
+        //     fontSize: 25, fontWeight: FontWeight.bold, color: Colors.black),
+        //   ),
+        // ),
 
         /// these themes are working with the old buttons style
         accentColor: Colors.limeAccent, //accents colors
@@ -155,6 +165,15 @@ class HomePage extends StatelessWidget {
                 buildBtn(context, "How To?", const HowToSection()),
                 const SizedBox(height: 16),
                 buildBtn(context, "Section 4", const Section4()),
+                const SizedBox(height: 16),
+                buildBtn(
+                    context,
+                    "Section 5 BMI App",
+                    const ResultScreen(
+                      age: 22,
+                      isMale: true,
+                      result: 25,
+                    )),
               ],
             ),
           ),
