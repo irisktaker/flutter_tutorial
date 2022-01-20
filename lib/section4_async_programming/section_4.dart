@@ -54,7 +54,7 @@ class Section4 extends StatelessWidget {
                     text: 'URL Launcher', widget: const URLLauncher()),
                 buildBtnWidget(
                     text: 'Shared Preferences',
-                    widget: const SharedPreferences()),
+                    widget: const ESharedPreferences()),
                 buildBtnWidget(
                     text: 'SignUp Shared Preferences',
                     widget: const SignUpSharedPreferences()),
