@@ -9,7 +9,8 @@ import '02_use_validate/use_validate_on_text_field.dart';
 import '02_use_validate/use_validate_on_text_form_field.dart';
 import '03_stream_controller_and_stream_subscription/stream_controller_and_stream_subscription.dart';
 import '06_sliver_list/sliver_list.dart';
-import '08_making_scrollable_tabs_with_tabBar/making_scrollable_tabs_with_tabBar.dart';
+
+import '08_making_scrollable_tabs_with_tab_bar/making_scrollable_tabs_with_tab_bar.dart';
 import 'back_button.dart';
 
 class HowToSection extends StatelessWidget {

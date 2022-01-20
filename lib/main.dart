@@ -1,7 +1,6 @@
 // ignore_for_file: deprecated_member_use
 
 import 'package:complete_dev_guide/section4_async_programming/section_4.dart';
-import 'package:complete_dev_guide/section5_bmi_app/result_screen.dart';
 import 'package:flutter/material.dart';
 import 'section0_how_to/how_to.dart';
 import 'section2_flutter_basics/course_lessons.dart';
@@ -166,14 +165,7 @@ class HomePage extends StatelessWidget {
                 const SizedBox(height: 16),
                 buildBtn(context, "Section 4", const Section4()),
                 const SizedBox(height: 16),
-                buildBtn(
-                    context,
-                    "Section 5 BMI App",
-                    const ResultScreen(
-                      age: 22,
-                      isMale: true,
-                      result: 25,
-                    )),
+                buildBtn(context, "Section 5 BMI App", const BMIApp()),
               ],
             ),
           ),

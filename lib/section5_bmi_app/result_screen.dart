@@ -20,6 +20,15 @@ class ResultScreen extends StatelessWidget {
                 ? resultText = 'Normal'
                 : resultText = 'Thin';
 
+    ///
+    /// just example of setting rules and errors
+    /// in the analysis_options.yaml file
+    ///
+    // if (result >= 30)
+    //   resultText = 'sss';
+    // else if (result >= 25) resultText = 'sss';
+    // if (result >= 25) resultText = 'sss';
+
     return resultText;
   }
 
@@ -40,6 +49,7 @@ class ResultScreen extends StatelessWidget {
 
             style: const TextStyle(
                 fontSize: 25, fontWeight: FontWeight.bold, color: Colors.white),
+            textAlign: TextAlign.center,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -52,7 +62,7 @@ class ResultScreen extends StatelessWidget {
                 const SizedBox(height: 16),
                 Text("Healthiness: $resultPhrase"),
                 const SizedBox(height: 16),
-                Text("Result: $age"),
+                Text("Age: $age"),
               ],
             ),
           ),
