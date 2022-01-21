@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
 
         /// bmi app
-        canvasColor: Colors.black,
+        // canvasColor: Colors.black,
         // textTheme: TextTheme(
         //   headline3: TextStyle(
         //     fontSize: 25, fontWeight: FontWeight.bold, color: Colors.black),

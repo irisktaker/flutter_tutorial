@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.complete_dev_guide">
    <application
-        android:label="complete_dev_guide"
+        android:label="Flutter Guide"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

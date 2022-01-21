@@ -1,5 +1,8 @@
 // ignore_for_file: unnecessary_string_interpolations
 
+import 'dart:math';
+
+import 'package:complete_dev_guide/section5_bmi_app/result_screen.dart';
 import 'package:flutter/material.dart';
 
 class BMIApp extends StatefulWidget {
@@ -9,14 +12,17 @@ class BMIApp extends StatefulWidget {
   _BMIAppState createState() => _BMIAppState();
 }
 
-double sliderValue = 120;
-double weight = 60;
-int age = 18;
-
 class _BMIAppState extends State<BMIApp> {
+  double heightValue = 120;
+  double weight = 60;
+  int age = 18;
+
+  bool isMale = true;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       appBar: AppBar(
         title: const Text("Body Mass Index"),
         centerTitle: true,
@@ -26,7 +32,7 @@ class _BMIAppState extends State<BMIApp> {
           padding: const EdgeInsets.all(20.0),
           child: DefaultTextStyle(
             style: const TextStyle(
-                fontSize: 30, fontWeight: FontWeight.bold, color: Colors.black),
+                fontSize: 24, fontWeight: FontWeight.bold, color: Colors.black),
             child: Column(
               children: [
                 Expanded(
@@ -34,28 +40,22 @@ class _BMIAppState extends State<BMIApp> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      buildCard(
-                        title: "Male",
-                        icon: Icons.male,
-                      ),
+                      buildCard1(context, 'male'),
                       const SizedBox(width: 20),
-                      buildCard(
-                        title: "Female",
-                        icon: Icons.female,
-                      ),
+                      buildCard1(context, 'female'),
                     ],
                   ),
                 ),
                 const SizedBox(height: 20),
                 Expanded(
-                  flex: 4,
+                  flex: 3,
                   child: Container(
                     decoration: BoxDecoration(
-                      color: Colors.teal.shade300,
+                      color: Colors.blueGrey,
                       borderRadius: BorderRadius.circular(20),
                     ),
                     child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         const Text("Height"),
                         Row(
@@ -64,7 +64,7 @@ class _BMIAppState extends State<BMIApp> {
                           textBaseline: TextBaseline.alphabetic,
                           children: [
                             Text(
-                              "${sliderValue.toStringAsFixed(1)}",
+                              "${heightValue.toStringAsFixed(1)}",
                               style: const TextStyle(
                                   fontSize: 40, color: Colors.white),
                             ),
@@ -76,13 +76,13 @@ class _BMIAppState extends State<BMIApp> {
                           ],
                         ),
                         Slider(
-                          value: sliderValue,
+                          value: heightValue,
                           min: 50,
                           max: 220,
                           onChanged: (value) {
                             setState(() {});
 
-                            sliderValue = value;
+                            heightValue = value;
                             print(value);
                           },
                         ),
@@ -95,108 +95,9 @@ class _BMIAppState extends State<BMIApp> {
                   flex: 3,
                   child: Row(
                     children: [
-                      Expanded(
-                        child: Container(
-                          decoration: BoxDecoration(
-                            color: Colors.teal.shade300,
-                            borderRadius: BorderRadius.circular(20),
-                          ),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              const SizedBox(height: 10),
-                              const SizedBox(height: 10),
-                              const Text('Weight'),
-                              Text(
-                                '${weight.toStringAsFixed(1)}',
-                                style: const TextStyle(
-                                    fontSize: 40, color: Colors.white),
-                              ),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  IconButton(
-                                    onPressed: () {
-                                      setState(() {
-                                        weight -= 0.5;
-                                      });
-                                    },
-                                    icon: const Icon(
-                                      Icons.remove_circle_outline,
-                                      color: Colors.white,
-                                      size: 30,
-                                    ),
-                                  ),
-                                  IconButton(
-                                    onPressed: () {
-                                      setState(() {
-                                        weight += 0.5;
-                                      });
-                                    },
-                                    icon: const Icon(
-                                      Icons.add_circle_outline,
-                                      color: Colors.white,
-                                      size: 30,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              const SizedBox(height: 10),
-                            ],
-                          ),
-                        ),
-                      ),
+                      buildCard2(context, 'weight'),
                       const SizedBox(width: 20),
-                      Expanded(
-                        child: Container(
-                          decoration: BoxDecoration(
-                            color: Colors.teal.shade300,
-                            borderRadius: BorderRadius.circular(20),
-                          ),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              const SizedBox(height: 10),
-                              const Text('Age'),
-                              Text(
-                                '$age',
-                                style: const TextStyle(
-                                    fontSize: 40, color: Colors.white),
-                              ),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  IconButton(
-                                    onPressed: () {
-                                      setState(() {
-                                        age--;
-                                      });
-                                    },
-                                    icon: const Icon(
-                                      Icons.remove_circle_outline,
-                                      color: Colors.white,
-                                      size: 30,
-                                    ),
-                                  ),
-                                  IconButton(
-                                    onPressed: () {
-                                      setState(() {
-                                        age++;
-                                      });
-                                    },
-                                    icon: const Icon(
-                                      Icons.add_circle_outline,
-                                      color: Colors.white,
-                                      size: 30,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              const SizedBox(height: 10),
-                            ],
-                          ),
-                        ),
-                      ),
+                      buildCard2(context, 'age'),
                     ],
                   ),
                 ),
@@ -206,8 +107,20 @@ class _BMIAppState extends State<BMIApp> {
                   child: SizedBox(
                     width: double.infinity,
                     child: ElevatedButton(
-                      child: const Text("Calculate"),
-                      onPressed: () {},
+                      child: const Text(
+                        "Calculate",
+                        style: TextStyle(fontSize: 24),
+                      ),
+                      onPressed: () {
+                        double bmiResult = weight / pow(heightValue / 100, 2);
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => ResultScreen(
+                                result: bmiResult, isMale: isMale, age: age),
+                          ),
+                        );
+                      },
                     ),
                   ),
                 ),
@@ -219,30 +132,75 @@ class _BMIAppState extends State<BMIApp> {
     );
   }
 
-  Expanded buildCard({
-    required String? title,
-    required IconData? icon,
-    void Function()? onTap,
-  }) {
+  Expanded buildCard1(BuildContext context, String type) {
     return Expanded(
       child: InkWell(
-        onTap: onTap,
+        onTap: () => setState(() => isMale = type == 'male' ? true : false),
         child: Container(
           decoration: BoxDecoration(
-            color: Colors.teal.shade300,
+            color: (isMale && type == 'male') || (!isMale && type == 'female')
+                ? Colors.teal
+                : Colors.blueGrey,
             borderRadius: BorderRadius.circular(20),
           ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Icon(
-                icon,
+                type == 'male' ? Icons.male : Icons.female,
                 color: Colors.white,
-                size: 100,
+                size: 90,
               ),
-              Text(title!),
+              Text(type == 'male' ? "Male" : "Female"),
             ],
           ),
+        ),
+      ),
+    );
+  }
+
+  Expanded buildCard2(BuildContext context, String type) {
+    return Expanded(
+      child: Container(
+        decoration: BoxDecoration(
+          color: Colors.blueGrey,
+          borderRadius: BorderRadius.circular(20),
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Text(type == 'weight' ? 'Weight' : 'Age'),
+            Text(
+              type == 'weight' ? '${weight.toStringAsFixed(1)}' : '$age',
+              style: const TextStyle(fontSize: 35, color: Colors.white),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                FloatingActionButton(
+                  backgroundColor: Colors.teal,
+                  mini: true,
+                  onPressed: () =>
+                      setState(() => type == 'weight' ? weight -= 0.5 : age--),
+                  child: const Icon(
+                    Icons.remove,
+                    color: Colors.white,
+                  ),
+                ),
+                const SizedBox(width: 12),
+                FloatingActionButton(
+                  backgroundColor: Colors.teal,
+                  mini: true,
+                  onPressed: () =>
+                      setState(() => type == 'weight' ? weight += 0.5 : age++),
+                  child: const Icon(
+                    Icons.add,
+                    color: Colors.white,
+                  ),
+                ),
+              ],
+            ),
+          ],
         ),
       ),
     );

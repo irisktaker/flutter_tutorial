@@ -1,0 +1,35 @@
+
+
+
+
+/// How to change the app name and icon ?
+
+
+// For Android 
+
+- Android app name -> android:label =>> android/app/src/main/AndroidManifest.xml
+
+- Android app icon -> android:icon="@mipmap/ic_launcher"> 
+    from -> android/app/src/main/res/mipmap-mdpi/ic_launcher.png && all other sizes
+    we can use external extinction to help us
+
+
+// For IOS
+
+- IOS app name -> ios/Runner/Info.plist -> search for -> 
+    <key>CFBundleName</key>
+	<string>complete_dev_guide</string>
+    
+    change <string>complete_dev_guide</string> to the name you want , in our ex <string>Flutter Guide</string> 
+
+
+// create assets folder in the app folders 
+
+- add a package named flutter_launcher_icons: "last version"
+link: https://pub.dev/packages/flutter_launcher_icons/install
+ * add in the terminal -> flutter pub add flutter_launcher_icons
+
+ follow the guid 
+ https://pub.dev/packages/flutter_launcher_icons#book-guide
+
+- choose "download" the logo you want and added it to pubspec.yaml file
