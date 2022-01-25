@@ -1,4 +1,5 @@
 import 'package:complete_dev_guide/section0_how_to/back_button.dart';
+import 'package:complete_dev_guide/section6_more_about_flutter_ui/03_alert_dialog/alert_dialog.dart';
 import 'package:flutter/material.dart';
 
 import '../build_btn_widget.dart';
@@ -19,9 +20,17 @@ class Section5 extends StatelessWidget {
             child: Column(
               children: [
                 BuildBtnWidget(
-                    text: 'Future Toast', widget: const FlutterToast()),
+                  text: 'Future Toast',
+                  widget: const FlutterToast(),
+                ),
                 BuildBtnWidget(
-                    text: 'Custom AppBar', widget: const CustomAppBar()),
+                  text: 'Custom AppBar',
+                  widget: const CustomAppBar(),
+                ),
+                BuildBtnWidget(
+                  text: 'Alert Dialog',
+                  widget: const EAlertDialog(),
+                )
               ],
             ),
           ),
