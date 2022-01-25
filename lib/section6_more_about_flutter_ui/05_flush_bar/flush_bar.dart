@@ -11,6 +11,8 @@ class E_FlushBar extends StatefulWidget {
   _E_FlushBarState createState() => _E_FlushBarState();
 }
 
+// https://pub.dev/packages/another_flushbar/install
+
 class _E_FlushBarState extends State<E_FlushBar> {
   @override
   Widget build(BuildContext context) {
