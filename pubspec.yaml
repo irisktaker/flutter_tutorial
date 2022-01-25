@@ -43,6 +43,7 @@ dependencies:
   
   # SharedPreferences
   shared_preferences: ^2.0.12
+  flutter_styled_toast: ^2.0.0
 
 # for dev
 dev_dependencies:
