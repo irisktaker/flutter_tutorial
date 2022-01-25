@@ -44,6 +44,7 @@ dependencies:
   # SharedPreferences
   shared_preferences: ^2.0.12
   flutter_styled_toast: ^2.0.0
+  another_flushbar: ^1.10.28
 
 # for dev
 dev_dependencies:

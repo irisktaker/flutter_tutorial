@@ -1,6 +1,7 @@
 import 'package:complete_dev_guide/section0_how_to/back_button.dart';
 import 'package:complete_dev_guide/section6_more_about_flutter_ui/03_alert_dialog/alert_dialog.dart';
 import 'package:complete_dev_guide/section6_more_about_flutter_ui/04_snack_bar/snack_bar.dart';
+import 'package:complete_dev_guide/section6_more_about_flutter_ui/05_flush_bar/flush_bar.dart';
 import 'package:flutter/material.dart';
 
 import '../build_btn_widget.dart';
@@ -35,6 +36,10 @@ class Section5 extends StatelessWidget {
                 BuildBtnWidget(
                   text: 'Snack Bar',
                   widget: const E_SnackBar(),
+                ),
+                BuildBtnWidget(
+                  text: 'Flash Bar',
+                  widget: const E_FlushBar(),
                 ),
               ],
             ),
