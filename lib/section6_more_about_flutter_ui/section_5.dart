@@ -2,6 +2,7 @@ import 'package:complete_dev_guide/section0_how_to/back_button.dart';
 import 'package:complete_dev_guide/section6_more_about_flutter_ui/03_alert_dialog/alert_dialog.dart';
 import 'package:complete_dev_guide/section6_more_about_flutter_ui/04_snack_bar/snack_bar.dart';
 import 'package:complete_dev_guide/section6_more_about_flutter_ui/07_image_slider_carousel_1/image_slider_carousel_1.dart';
+import 'package:complete_dev_guide/section6_more_about_flutter_ui/09_radio_button/radio_button.dart';
 
 import 'package:flutter/material.dart';
 
@@ -56,6 +57,10 @@ class Section5 extends StatelessWidget {
                 BuildBtnWidget(
                   text: 'Image Slider Carousel Part 2',
                   widget: ImageSliderCarouselPart2(),
+                ),
+                BuildBtnWidget(
+                  text: 'Radio Button',
+                  widget: RadioButton(),
                 ),
               ],
             ),
