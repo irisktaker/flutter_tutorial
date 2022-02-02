@@ -3,6 +3,9 @@ import 'package:complete_dev_guide/section6_more_about_flutter_ui/03_alert_dialo
 import 'package:complete_dev_guide/section6_more_about_flutter_ui/04_snack_bar/snack_bar.dart';
 import 'package:complete_dev_guide/section6_more_about_flutter_ui/07_image_slider_carousel_1/image_slider_carousel_1.dart';
 import 'package:complete_dev_guide/section6_more_about_flutter_ui/09_radio_button/radio_button.dart';
+import 'package:complete_dev_guide/section6_more_about_flutter_ui/11_check_box/check_box.dart';
+import 'package:complete_dev_guide/section6_more_about_flutter_ui/12_switch/switch.dart';
+import 'package:complete_dev_guide/section6_more_about_flutter_ui/13_dropdown_button/dropdown_button.dart';
 
 import 'package:flutter/material.dart';
 
@@ -66,6 +69,18 @@ class Section6 extends StatelessWidget {
                 BuildBtnWidget(
                   text: 'Radio List Tile',
                   widget: ERadioListTile(),
+                ),
+                BuildBtnWidget(
+                  text: 'CheckBox',
+                  widget: Ex_CheckBox(),
+                ),
+                BuildBtnWidget(
+                  text: 'Switch',
+                  widget: Ex_Switch(),
+                ),
+                BuildBtnWidget(
+                  text: 'Dropdown',
+                  widget: Ex_Dropdown(),
                 ),
               ],
             ),

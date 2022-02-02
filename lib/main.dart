@@ -40,7 +40,7 @@ class MyApp extends StatelessWidget {
         // ),
 
         /// these themes are working with the old buttons style
-        accentColor: Colors.limeAccent, //accents colors
+        accentColor: Colors.black, //accents colors
         buttonTheme: const ButtonThemeData(
           buttonColor: Colors.black,
           textTheme: ButtonTextTheme.accent,
