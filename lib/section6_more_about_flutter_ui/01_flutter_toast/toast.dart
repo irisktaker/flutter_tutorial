@@ -1,7 +1,8 @@
 import 'package:complete_dev_guide/section0_how_to/back_button.dart';
-import 'package:complete_dev_guide/section6_more_about_flutter_ui/section_5.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_styled_toast/flutter_styled_toast.dart';
+
+import '../section_6.dart';
 
 class FlutterToast extends StatelessWidget {
   const FlutterToast({Key? key}) : super(key: key);
@@ -73,7 +74,7 @@ class FlutterToast extends StatelessWidget {
                           ToastManager().dismissAll(showAnim: true);
                           Navigator.push(context,
                               MaterialPageRoute(builder: (context) {
-                            return Section5();
+                            return Section6();
                           }));
                         },
                         icon: Icon(

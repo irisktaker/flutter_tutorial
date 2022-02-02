@@ -3,6 +3,7 @@ import 'package:complete_dev_guide/section0_how_to/02_use_validate/use_validate_
 import 'package:complete_dev_guide/section0_how_to/04_LinearGradient/linear_gradient.dart';
 import 'package:complete_dev_guide/section0_how_to/05_bottom_navigation_bar/bottom_navigation_bar.dart';
 import 'package:complete_dev_guide/section0_how_to/07_tab_bar/tab_bar.dart';
+import 'package:complete_dev_guide/section0_how_to/10_avoiding_on_screen_keyboard/avoiding_on_screen_keyboard.dart';
 import 'package:flutter/material.dart';
 
 import '02_use_validate/use_validate_on_text_field.dart';
@@ -73,7 +74,10 @@ class HowToSection extends StatelessWidget {
                 buildBtnWidget(text: 'Tab Bar', widget: const ETabBar()),
                 buildBtnWidget(
                     text: 'Making Scrollable Tabs With TabBar',
-                    widget: const MakingScrollableTabsWithTabBar())
+                    widget: const MakingScrollableTabsWithTabBar()),
+                buildBtnWidget(
+                    text: 'Avoiding On Screen Keyboard',
+                    widget: const AvoidingOnScreenKeyboard()),
               ],
             ),
           ),

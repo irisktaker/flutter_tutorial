@@ -1,8 +1,9 @@
 // ignore_for_file: deprecated_member_use
 
 import 'package:complete_dev_guide/section4_async_programming/section_4.dart';
-import 'package:complete_dev_guide/section6_more_about_flutter_ui/section_5.dart';
+import 'package:complete_dev_guide/section6_more_about_flutter_ui/section_6.dart';
 import 'package:flutter/material.dart';
+import 'examples_section/examples_section.dart';
 import 'section0_how_to/how_to.dart';
 import 'section2_flutter_basics/course_lessons.dart';
 import 'section2_flutter_basics/33_passing_data_between_screens/routes/screen1.dart';
@@ -157,19 +158,19 @@ class HomePage extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                buildBtn(context, "Course Lessons", const CourseLessons()),
-                const SizedBox(height: 16),
-                buildBtn(context, "Quiz App", const QuizApp()),
-                const SizedBox(height: 16),
-                // buildBtn(context, 'Async Programming', widget)
-                buildBtn(context, "How To?", const HowToSection()),
-                const SizedBox(height: 16),
-                buildBtn(context, "Section 4", const Section4()),
-                const SizedBox(height: 16),
-                buildBtn(context, "Section 5 BMI App", const BMIApp()),
-                const SizedBox(height: 16),
-                buildBtn(context, "Section 6 More about Flutter UI",
-                    const Section5()),
+                buildBtn(context, "Examples Section", const ExamplesSection()),
+                const SizedBox(height: 8),
+                buildBtn(context, "S0 How To?", const HowToSection()),
+                const SizedBox(height: 8),
+                buildBtn(context, "S1 Flutter Basics", const CourseLessons()),
+                const SizedBox(height: 8),
+                buildBtn(context, "S2 Quiz App", const QuizApp()),
+                const SizedBox(height: 8),
+                buildBtn(context, "S4 Async programming", const Section4()),
+                const SizedBox(height: 8),
+                buildBtn(context, "S5 BMI App", const BMIApp()),
+                const SizedBox(height: 8),
+                buildBtn(context, "S6 More about Flutter UI", const Section6()),
               ],
             ),
           ),

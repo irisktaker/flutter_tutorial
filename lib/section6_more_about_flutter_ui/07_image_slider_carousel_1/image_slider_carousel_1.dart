@@ -1,3 +1,5 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:complete_dev_guide/section0_how_to/back_button.dart';
 import 'package:flutter/material.dart';
