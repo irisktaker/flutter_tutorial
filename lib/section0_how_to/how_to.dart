@@ -6,6 +6,7 @@ import 'package:complete_dev_guide/section0_how_to/07_tab_bar/tab_bar.dart';
 import 'package:complete_dev_guide/section0_how_to/10_avoiding_on_screen_keyboard/avoiding_on_screen_keyboard.dart';
 import 'package:flutter/material.dart';
 
+import '../build_btn_widget.dart';
 import '02_use_validate/use_validate_on_text_field.dart';
 import '02_use_validate/use_validate_on_text_form_field.dart';
 import '03_stream_controller_and_stream_subscription/stream_controller_and_stream_subscription.dart';
@@ -19,28 +20,6 @@ class HowToSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Widget buildBtnWidget({
-      required String? text,
-      required Widget? widget,
-    }) {
-      return Column(
-        children: [
-          SizedBox(
-            width: double.infinity,
-            height: 40,
-            child: TextButton(
-              child: Text(text!),
-              onPressed: () => Navigator.push(
-                context,
-                MaterialPageRoute(builder: (BuildContext context) => widget!),
-              ),
-            ),
-          ),
-          const SizedBox(height: 10),
-        ],
-      );
-    }
-
     return Scaffold(
       appBar: backButton(context),
       body: SingleChildScrollView(
@@ -49,33 +28,33 @@ class HowToSection extends StatelessWidget {
           child: Center(
             child: Column(
               children: [
-                buildBtnWidget(
+                BuildBtnWidget(
                     text: 'Show Hide Password',
                     widget: const ShowHidePassword()),
-                buildBtnWidget(
+                BuildBtnWidget(
                     text: 'Use Validate On TextField',
                     widget: const UseValidateOnTextField()),
-                buildBtnWidget(
+                BuildBtnWidget(
                     text: 'Use Validate On TextFormField',
                     widget: const UseValidateOnTextFormField()),
-                buildBtnWidget(
+                BuildBtnWidget(
                     text: 'Use Validate On TextFormField',
                     widget: const UseValidateOnTextFormFieldPart2()),
-                buildBtnWidget(
+                BuildBtnWidget(
                     text: 'Stream Example', widget: const StreamExample()),
-                buildBtnWidget(
+                BuildBtnWidget(
                     text: 'Linear Gradient',
                     widget: const ExampleLinearGradient()),
-                buildBtnWidget(
+                BuildBtnWidget(
                     text: 'Bottom Navigation Bar',
                     widget: const ExampleOnBottomNavBar()),
-                buildBtnWidget(
+                BuildBtnWidget(
                     text: 'Sliver List', widget: const ExampleSliverList()),
-                buildBtnWidget(text: 'Tab Bar', widget: const ETabBar()),
-                buildBtnWidget(
+                BuildBtnWidget(text: 'Tab Bar', widget: const ETabBar()),
+                BuildBtnWidget(
                     text: 'Making Scrollable Tabs With TabBar',
                     widget: const MakingScrollableTabsWithTabBar()),
-                buildBtnWidget(
+                BuildBtnWidget(
                     text: 'Avoiding On Screen Keyboard',
                     widget: const AvoidingOnScreenKeyboard()),
               ],

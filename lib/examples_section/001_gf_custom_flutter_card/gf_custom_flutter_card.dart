@@ -8,7 +8,7 @@ class GFFlutterCardExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: backButton(context, text: 'Examples'),
+      appBar: backButton(context, text: 'GFFlutterCardExample'),
       body: ListView(
         children: [
           GFCard(

@@ -12,9 +12,14 @@ class BuildBtnWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SizedBox(
+        Container(
           width: double.infinity,
           height: 40,
+          decoration: BoxDecoration(
+            color: Color(0xFF7750fa),
+            borderRadius: BorderRadius.circular(4),
+          ),
+          alignment: Alignment.centerLeft,
           child: TextButton(
             child: Text(text),
             onPressed: () => Navigator.push(

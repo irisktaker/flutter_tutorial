@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         ///
         /// this works for all
-        primarySwatch: Colors.teal,
+        primarySwatch: Colors.purple,
         visualDensity: VisualDensity.adaptivePlatformDensity,
 
         /// bmi app
@@ -182,7 +182,9 @@ class HomePage extends StatelessWidget {
   ElevatedButton buildBtn(BuildContext context, String title, Widget widget) {
     return ElevatedButton(
       style: ButtonStyle(
+        backgroundColor: MaterialStateProperty.all(Color(0xFF7750fa)),
         padding: MaterialStateProperty.all(const EdgeInsets.all(18)),
+        alignment: Alignment.centerLeft,
       ),
       onPressed: () {
         Navigator.push(
@@ -192,7 +194,10 @@ class HomePage extends StatelessWidget {
           ),
         );
       },
-      child: Text(title, style: const TextStyle(fontSize: 22)),
+      child: Text(
+        title,
+        style: const TextStyle(fontSize: 16),
+      ),
     );
   }
 }

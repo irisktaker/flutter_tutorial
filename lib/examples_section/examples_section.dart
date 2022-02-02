@@ -1,3 +1,4 @@
+import 'package:complete_dev_guide/section0_how_to/back_button.dart';
 import 'package:flutter/material.dart';
 
 import '../build_btn_widget.dart';
@@ -10,6 +11,7 @@ class ExamplesSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: backButton(context, text: 'Examples Section'),
       body: ListView(
         padding: const EdgeInsets.all(12),
         children: [
