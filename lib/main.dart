@@ -24,6 +24,11 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Developer Guide',
 
+      // theme + darkTheme + themeMode -> controls the theme app
+      // switch lesson -> s6 lesson 12_switch
+      themeMode: ThemeMode.system,
+      // darkTheme: ThemeData.dark(),
+
       /// 11- EButtonsSummary Lesson
       theme: ThemeData(
         ///

@@ -13,6 +13,7 @@ import '03_stream_controller_and_stream_subscription/stream_controller_and_strea
 import '06_sliver_list/sliver_list.dart';
 
 import '08_making_scrollable_tabs_with_tab_bar/making_scrollable_tabs_with_tab_bar.dart';
+import '11_bottom_overflowed_error_caused_by_keyboard/bottom_overflowed_error_caused_by_keyboard.dart';
 import 'back_button.dart';
 
 class HowToSection extends StatelessWidget {
@@ -57,6 +58,9 @@ class HowToSection extends StatelessWidget {
                 BuildBtnWidget(
                     text: 'Avoiding On Screen Keyboard',
                     widget: const AvoidingOnScreenKeyboard()),
+                BuildBtnWidget(
+                    text: '“Bottom Overflowed” error caused by the keyboard',
+                    widget: BottomOverflowedErrorCausedByTheKeyboard()),
               ],
             ),
           ),
