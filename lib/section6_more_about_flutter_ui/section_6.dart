@@ -17,6 +17,7 @@ import '06_overflow_softwrap_selectable_text/overflow_softwrap_selectable_text.d
 import '08_image_slider_carousel_2/image_slider_carousel_2.dart';
 import '10_radio_list_tile/radio_list_tile.dart';
 import '14_expandable_list/expandable_list.dart';
+import '15_marquee/marquee.dart';
 
 class Section6 extends StatelessWidget {
   const Section6({Key? key}) : super(key: key);
@@ -86,6 +87,10 @@ class Section6 extends StatelessWidget {
                 BuildBtnWidget(
                   text: 'Expandable List',
                   widget: Ex_Expandable(),
+                ),
+                BuildBtnWidget(
+                  text: 'Marquee',
+                  widget: Ex_Marquee(),
                 ),
               ],
             ),
