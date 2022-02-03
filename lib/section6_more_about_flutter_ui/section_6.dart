@@ -16,6 +16,7 @@ import '05_flush_bar/flush_bar.dart';
 import '06_overflow_softwrap_selectable_text/overflow_softwrap_selectable_text.dart';
 import '08_image_slider_carousel_2/image_slider_carousel_2.dart';
 import '10_radio_list_tile/radio_list_tile.dart';
+import '14_expandable_list/expandable_list.dart';
 
 class Section6 extends StatelessWidget {
   const Section6({Key? key}) : super(key: key);
@@ -81,6 +82,10 @@ class Section6 extends StatelessWidget {
                 BuildBtnWidget(
                   text: 'Dropdown',
                   widget: Ex_Dropdown(),
+                ),
+                BuildBtnWidget(
+                  text: 'Expandable List',
+                  widget: Ex_Expandable(),
                 ),
               ],
             ),
