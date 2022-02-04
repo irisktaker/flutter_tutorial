@@ -18,6 +18,7 @@ import '08_image_slider_carousel_2/image_slider_carousel_2.dart';
 import '10_radio_list_tile/radio_list_tile.dart';
 import '14_expandable_list/expandable_list.dart';
 import '15_marquee/marquee.dart';
+import '16_image_picker/image_picker.dart';
 
 class Section6 extends StatelessWidget {
   const Section6({Key? key}) : super(key: key);
@@ -91,6 +92,10 @@ class Section6 extends StatelessWidget {
                 BuildBtnWidget(
                   text: 'Marquee',
                   widget: Ex_Marquee(),
+                ),
+                BuildBtnWidget(
+                  text: 'Image Picker',
+                  widget: Ex_ImagePicker(),
                 ),
               ],
             ),
