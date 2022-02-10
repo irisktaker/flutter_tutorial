@@ -1,3 +1,4 @@
+import 'package:complete_dev_guide/section0_how_to/back_button.dart';
 import 'package:flutter/material.dart';
 
 class Ex_ColorPicker extends StatelessWidget {
@@ -5,8 +6,9 @@ class Ex_ColorPicker extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      
+    return Scaffold(
+      appBar: backButton(context,text: 'Color Picker'),
+      body: Center(),
     );
   }
 }

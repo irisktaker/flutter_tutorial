@@ -6,6 +6,7 @@ import 'package:complete_dev_guide/section6_more_about_flutter_ui/09_radio_butto
 import 'package:complete_dev_guide/section6_more_about_flutter_ui/11_check_box/check_box.dart';
 import 'package:complete_dev_guide/section6_more_about_flutter_ui/12_switch/switch.dart';
 import 'package:complete_dev_guide/section6_more_about_flutter_ui/13_dropdown_button/dropdown_button.dart';
+import 'package:complete_dev_guide/section6_more_about_flutter_ui/17_color_picker/color_picker.dart';
 
 import 'package:flutter/material.dart';
 
@@ -96,6 +97,10 @@ class Section6 extends StatelessWidget {
                 BuildBtnWidget(
                   text: 'Image Picker',
                   widget: Ex_ImagePicker(),
+                ),
+                BuildBtnWidget(
+                  text: 'Color Picker',
+                  widget: Ex_ColorPicker(),
                 ),
               ],
             ),
